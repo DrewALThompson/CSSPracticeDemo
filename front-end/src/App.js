@@ -1,13 +1,24 @@
-import logo from './logo.svg';
+import {
+  BrowserRouter as Router,
+  Switch,
+  Route,
+  Link
+} from 'react-router-dom';
+
 import './App.css';
 
 function App() {
   return (
-    <div className="App">
-      <h1 className='neonSign'>
-        
-      </h1>
-    </div>
+    <Router>
+      <Link route={'/'}>Home</Link>
+      <Link route={'/neon'}>Neon</Link>
+
+      <Switch>
+        <Route exact path='/'></Route>
+        <Route path='/neon'></Route>
+      </Switch>
+
+    </Router>
   );
 }
 
