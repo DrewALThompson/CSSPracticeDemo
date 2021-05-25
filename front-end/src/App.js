@@ -4,7 +4,8 @@ import {
   Route,
   Link
 } from 'react-router-dom';
-
+import Home from './templates/home'
+import Neon from './templates/neon'
 import './App.css';
 
 function App() {
@@ -14,8 +15,9 @@ function App() {
       <Link route={'/neon'}>Neon</Link>
 
       <Switch>
-        <Route exact path='/'></Route>
-        <Route path='/neon'></Route>
+        <Route exact path='/'><Home /></Route>
+        <Route path='/neon'><Neon /></Route>
+        <Route path='*'><NotFound /></Route>
       </Switch>
 
     </Router>
